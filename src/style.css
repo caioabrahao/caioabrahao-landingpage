@@ -61,11 +61,15 @@ body{
 .section{
   height: 100vh;
   padding: 0 96px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .hero{
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .hero h1{
   font-size: 6rem;
@@ -74,6 +78,11 @@ body{
 }
 .hero p{
   font-size: 1.2rem;
+}
+.hero-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .button{
@@ -104,17 +113,17 @@ body{
 
 .overlay-circle{
   position: absolute;
-  top: -50%;
-  left: -20%;
+  bottom: -100%;
+  left: -25%;
   z-index: 2;
   border: #C1BBB0 1px solid;
   pointer-events: none;
 
-  width: 1250px;
-  height: 1800px;
+  width: 150vw;
+  height: 1250px;
   border-radius: 100%;
 
-  display: none;
+  display: block;
 }
 
 .grain-texture{
