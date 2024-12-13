@@ -59,6 +59,7 @@ body{
 }
 
 .section{
+  position: relative;
   height: 100vh;
   padding: 0 96px;
   overflow: hidden;
