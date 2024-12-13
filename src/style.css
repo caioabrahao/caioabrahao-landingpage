@@ -63,7 +63,6 @@ body{
   padding: 0 96px;
   overflow: hidden;
   overflow-x: hidden;
-  position: relative;
 }
 
 .hero{
@@ -234,7 +233,7 @@ body{
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -2;
+  z-index: -3;
   width: 100vw;
   height: 100vh;
 
@@ -243,6 +242,15 @@ body{
   align-items: center;
 }
 
+.cursor-black-ball{
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 100%;
+  background-color: black;
+  pointer-events: none;
+  z-index: -2;
+}
 .circle{
   position: absolute;
   width: 630px;
