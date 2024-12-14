@@ -20,7 +20,7 @@ body{
 
   cursor: url('/src/cursors/dot.svg'), auto;
 
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .header{
@@ -64,8 +64,6 @@ body{
   position: relative;
   height: 100vh;
   padding: 0 96px;
-  overflow: hidden;
-  overflow-x: hidden;
 }
 
 .hero{
@@ -89,6 +87,97 @@ body{
 }
 .hero-text .button{
   margin-top: 24px;
+}
+
+.featured-projects{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+.title-2{
+  font-size: 4rem;
+  font-weight: 500;
+  font-family: 'Playfair Display', serif;
+}
+
+.project-list{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+
+.project-card{
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: flex-start;
+
+  background: linear-gradient(25deg, #1C1C1C, #2E2E2E);
+  color: var(--beige);
+  border: rgba(211, 197, 174, .3) solid 1px;
+  box-shadow: 
+    -4px 4px 16px rgb(165, 165, 165, .1) inset,
+    4px -4px 16px rgb(165, 165, 165, .1) inset,
+    0 4px 30px rgba(0, 0, 0, 0.1);
+
+  padding: 24px;
+  width: 80%;
+
+  transition: all .3s cubic-bezier(.25, .8, .25, 1);
+}
+.project-card:hover{
+  border: rgba(211, 197, 174, 0.7) solid 1px;
+}
+.project-card:focus{
+  border: #FC8C3D 1px solid;
+  outline: none;
+}
+
+.project-thumbnail{
+  background-color: #2E2E2E;
+  height: 200px;
+  width: 350px;
+}
+.project-info{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 50%;
+}
+.project-title{
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.project-subtitle{
+  font-size: 1rem;
+  opacity: .5;
+}
+.project-description{
+  font-size: 1rem;
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact-description{
+  text-align: center;
+  margin: 16px 0
+}
+
+.contact-socials{
+  display: flex;
+  gap: 32px;
+  font-size: 32px;
+  a{
+    color: var(--beige);
+    text-decoration: none;
+  }
 }
 
 .button{
@@ -120,19 +209,17 @@ body{
 }
 
 .textfield-container{
-  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
 
   bottom: 64px;
+  margin-top: 64px;
 }
 .textfield-container p{
   font-size: 1.2rem;
-  font-weight: 200;
-  letter-spacing: 40%;
 }
 .hidden{
   display: none;
@@ -205,7 +292,7 @@ body{
   left: 0;
   z-index: 1;
   width: 100vw;
-  height: 100vh;
+  height: 300vh;
   pointer-events: none;
 
   background-image: url('/img/GRAIN.png');
@@ -219,7 +306,7 @@ body{
   left: 0;
   z-index: -1;
   width: 100vw;
-  height: 100vh;
+  height: 300vh;
 
   will-change: backdrop-filter;
 
