@@ -132,6 +132,7 @@ body{
 }
 .project-card:hover{
   border: rgba(211, 197, 174, 0.7) solid 1px;
+  filter: drop-shadow(0 0 8px rgba(211, 197, 174, 0.1));
 }
 
 .project-card a{
@@ -143,12 +144,22 @@ body{
   background-color: #2E2E2E;
   height: 200px;
   aspect-ratio: 16/9;
+  opacity: .7;
 }
 #thumbnail-1{
   background-image: url('/img/thumbnails/2024-portfolio.png');
   background-size: cover;
   background-position: center;
-  opacity: .7;
+}
+#thumbnail-2{
+  background-image: url('/img/thumbnails/renderframe-thumb.png');
+  background-size: cover;
+  background-position: center;
+}
+#thumbnail-3{
+  background-image: url('/img/thumbnails/underfabner-thumb.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .project-info{
