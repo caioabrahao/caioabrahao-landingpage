@@ -1,6 +1,8 @@
 import gsap from 'gsap';
 import { Observer } from "gsap/Observer";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
+gsap.registerPlugin(ScrollToPlugin);
 gsap.registerPlugin(Observer);
 
 
