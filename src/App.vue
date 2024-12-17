@@ -34,7 +34,8 @@ import SimpleTextInput from './components/SimpleTextInput.vue';
            proj-subtitle="A retrospective on my projects of the year"
            proj-description="A showcase of all my design related projects of 2024, featuring a 
                 artistic experiments, graphic and web designs, illustrations and photography. <br> Check it right now
-              on my Behance profile or click in this card!">
+              on my Behance profile or click in this card!"
+           proj-thumbnail-url="/thumbnails/2024portfolio-thumb.png">
           </ProjectCard>
         </div>
 

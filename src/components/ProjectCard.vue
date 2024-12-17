@@ -18,19 +18,20 @@ const props = defineProps({
     type: String,
     default: 'Project Description'
   },
+    projThumbnailUrl: String,
 })
 </script>
 
 <template>
 <a :href="props.projLink" target="_blank" class="project-card">
-    <div class="project-thumbnail" id="thumbnail-1"></div>
-        <div class="project-info">
-            <div>
-                <h3 class="project-title">{{ projTitle }}</h3>
-                <p class="project-subtitle">{{ projSubtitle }}</p>
-            </div>
+    <div class="project-thumbnail" :style="{'--thumbnailURL': projThumbnailUrl ? `url(${projThumbnailUrl})` : 'none'}"></div>
+      <div class="project-info">
+          <div>
+              <h3 class="project-title">{{ projTitle }}</h3>
+              <p class="project-subtitle">{{ projSubtitle }}</p>
+          </div>
         <p class="project-description"><span v-html="projDescription"></span></p>
-    </div>
+      </div>
 </a>
 </template>
 
@@ -66,7 +67,9 @@ const props = defineProps({
 }
 
 .project-thumbnail{
-  background-color: #2E2E2E;
+  background: #2E2E2E no-repeat center center;
+  background-image: var(--thumbnailURL);
+  background-size: cover;
   height: 200px;
   aspect-ratio: 16/9;
   opacity: .7;
