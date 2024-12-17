@@ -6,16 +6,20 @@ import GrainOverlay from './components/overlays/GrainOverlay.vue';
 import ProjectCard from './components/ProjectCard.vue';
 import SocialLinks from './components/SocialLinks.vue';
 import SimpleTextInput from './components/SimpleTextInput.vue';
+import AnimatedBackground from './components/AnimatedBackground.vue';
 </script>
 
 
 <template>
   <GrainOverlay></GrainOverlay>
   <GlassBackground></GlassBackground>
+  <AnimatedBackground></AnimatedBackground>
 
   <Header></Header>
   <main>
     <section class="section hero">
+
+      <div class="overlay-circle"></div>
 
         <div class="hero-text">
           <h1 class="title-1">Caio Abrahão</h1>
@@ -56,6 +60,25 @@ import SimpleTextInput from './components/SimpleTextInput.vue';
 
 
 <style scoped>
+.overlay-circle{
+  position: absolute;
+  bottom: -100%;
+  left: -25%;
+  z-index: 2;
+  border: #C1BBB0 1px solid;
+  pointer-events: none;
+
+  width: 150vw;
+  height: 1250px;
+  border-radius: 100%;
+
+  display: block;
+}
+
+.hero{
+  position: relative;
+}
+
   .hero-text{
     display: flex;
     flex-direction: column;
