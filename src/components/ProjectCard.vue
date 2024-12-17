@@ -1,14 +1,35 @@
+<script setup>
+import { defineProps } from 'vue'
+
+const props = defineProps({
+    projLink: {
+    type: String,
+    default: '#'
+  },
+    projTitle: {
+    type: String,
+    default: 'Project Title'
+  },
+    projSubtitle: {
+    type: String,
+    default: 'Project Subtitle'
+  },
+    projDescription: {
+    type: String,
+    default: 'Project Description'
+  },
+})
+</script>
+
 <template>
-<a href="https://www.behance.net/gallery/214767069/My-2024-Portfolio-Caio-Abrahao" target="_blank" class="project-card">
+<a :href="props.projLink" target="_blank" class="project-card">
     <div class="project-thumbnail" id="thumbnail-1"></div>
         <div class="project-info">
             <div>
-                <h3 class="project-title">2024 Design Portfolio</h3>
-                <p class="project-subtitle">A retrospective on my projects of the year</p>
+                <h3 class="project-title">{{ projTitle }}</h3>
+                <p class="project-subtitle">{{ projSubtitle }}</p>
             </div>
-        <p class="project-description">A showcase of all my design related projects of 2024, featuring a 
-        artistic experiments, graphic and web designs, illustrations and photography. <br>Check it right now
-        on my Behance profile or click in this card!</p>
+        <p class="project-description"><span v-html="projDescription"></span></p>
     </div>
 </a>
 </template>
@@ -30,7 +51,7 @@
     0 4px 30px rgba(0, 0, 0, 0.1);
 
   padding: 24px;
-  width: 75%;
+  width: 70%;
 
   transition: all .3s cubic-bezier(.25, .8, .25, 1);
 }
