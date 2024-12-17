@@ -29,7 +29,7 @@ import ProjectCard from './components/ProjectCard.vue';
           <ProjectCard></ProjectCard>
         </div>
 
-        <Button btn-label="Show More" href="#"></Button>
+        <Button btn-label="Show More" href="#" btn-style="secondary"></Button>
       </section>
   </main>
 </template>
