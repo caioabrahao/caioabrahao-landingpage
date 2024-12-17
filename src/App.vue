@@ -5,6 +5,7 @@ import GlassBackground from './components/overlays/GlassBackground.vue';
 import GrainOverlay from './components/overlays/GrainOverlay.vue';
 import ProjectCard from './components/ProjectCard.vue';
 import SocialLinks from './components/SocialLinks.vue';
+import SimpleTextInput from './components/SimpleTextInput.vue';
 </script>
 
 
@@ -47,14 +48,7 @@ import SocialLinks from './components/SocialLinks.vue';
 
         <hr class="division-line">
 
-        <div class="textfield-container">
-          <p>Write your idea below to start!</p>
-          <div class="textfield-elements">
-            <label for="search" class="hidden">Message</label>
-            <input type="text" class="textfield" placeholder="Can you create a cool site for me?">
-            <button class="button"><i class="ri-arrow-right-line"></i></button>
-          </div>
-        </div>
+        <SimpleTextInput></SimpleTextInput>
       </section>
   </main>
 </template>
