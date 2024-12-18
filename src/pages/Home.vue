@@ -4,6 +4,7 @@ import SocialLinks from '../components/SocialLinks.vue';
 import SimpleTextInput from '../components/SimpleTextInput.vue';
 import AnimatedBackground from '../components/AnimatedBackground.vue';
 import Button from '../components/Button.vue';
+
 </script>
 
 
