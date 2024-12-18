@@ -10,10 +10,10 @@ export default {
       <p class="logo">CA</p>
       <nav>
         <ul class="navlist">
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="src/pages/about.html">About</a></li>
-          <li><a href="src/pages/portfolio.html">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/about">About</router-link></li>
+          <li><router-link to="/">Portfolio</router-link></li>
+          <li><router-link to="/">Contact</router-link></li>
         </ul>
       </nav>
     </header>

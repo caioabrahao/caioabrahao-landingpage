@@ -9,6 +9,7 @@ import Button from '../components/Button.vue';
 
 
 <template>
+    <AnimatedBackground></AnimatedBackground>
 <main>
     <section class="section hero">
 
