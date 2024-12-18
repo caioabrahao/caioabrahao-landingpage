@@ -5,8 +5,8 @@
 
 <template> 
 <div class="animated-background">
-    <img class="gradient-ball orange" src="/balls/orange-ball.svg" alt="ball">
-    <img class="gradient-ball blue" src="/balls/cyan-ball.svg" alt="ball">
+    <img class="gradient-ball" id="orange" src="/balls/orange-ball.svg" alt="ball">
+    <img class="gradient-ball" id="blue" src="/balls/cyan-ball.svg" alt="ball">
 </div>
 </template>
 

@@ -24,10 +24,16 @@ const routes = [
 ];
 
 
-// Create and export the router
 const router = createRouter({
-  history: createWebHistory(), // Use HTML5 history mode
+  history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { top: 0 };
+    }
+  },
 });
 
 export default router;
