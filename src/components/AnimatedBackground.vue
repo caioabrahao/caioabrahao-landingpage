@@ -1,5 +1,18 @@
 <script setup>
+import { onMounted } from 'vue';
+import gsap from 'gsap';
 
+onMounted(() => {
+  const tl = gsap.timeline({ repeat: -1,});
+
+  tl.to('#blue', { x: -600, duration: 3, ease: "sine.inOut",})
+  tl.to('#orange', { x: 600, duration: 3,ease: "sine.inOut",}, '<')
+  tl.set('#blue', { zIndex: -4,})
+  tl.to('#blue', { x: 0, duration: 5, ease: "sine.inOut",})
+  tl.to('#orange', { x: 0, duration: 5, ease: "sine.inOut" }, '<')
+
+  tl.timeScale(.5);
+});
 </script>
 
 
@@ -8,6 +21,7 @@
     <img class="gradient-ball" id="orange" src="/balls/orange-ball.svg" alt="ball">
     <img class="gradient-ball" id="blue" src="/balls/cyan-ball.svg" alt="ball">
 </div>
+
 </template>
 
 <style scoped>
