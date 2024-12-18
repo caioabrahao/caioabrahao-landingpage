@@ -28,6 +28,8 @@ body{
     background-color: black;
     color: var(--beige);
     position: relative;
+
+    overflow-x: hidden;
 }
 
 .section{
