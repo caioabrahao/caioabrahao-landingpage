@@ -1,5 +1,12 @@
 <script setup>
 import ProjectCard from '../components/ProjectCard.vue';
+import gsap from 'gsap';
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  gsap.from('.project-card', { duration: 1, opacity: 0, y: 50, delay: .2, stagger: 0.2 });
+  gsap.from('.title-2', { duration: 1, opacity: 0, x: -50 });
+});
 </script>
 
 
@@ -9,7 +16,7 @@ import ProjectCard from '../components/ProjectCard.vue';
         <h1 class="title-2">highlight creations</h1>
 
         <div class="project-list">
-            <ProjectCard
+            <ProjectCard class="project-card"
             proj-link="https://www.behance.net/gallery/214767069/My-2024-Portfolio-Caio-Abrahao"
             proj-title="2024 Design Portfolio"
             proj-subtitle="A retrospective on my projects of the year"
@@ -18,7 +25,7 @@ import ProjectCard from '../components/ProjectCard.vue';
                       on my Behance profile or click in this card!"
             proj-thumbnail-url="/thumbnails/2024portfolio-thumb.png"></ProjectCard>
 
-            <ProjectCard
+            <ProjectCard class="project-card"
             proj-link="https://the-render-frame.vercel.app/"
             proj-title="RENDER FRAME"
             proj-subtitle="A 3d website made using three.js"
@@ -27,7 +34,7 @@ import ProjectCard from '../components/ProjectCard.vue';
                       on my Behance profile or click in this card!"
             proj-thumbnail-url="/thumbnails/renderframe-thumb.png"></ProjectCard>
 
-            <ProjectCard
+            <ProjectCard class="project-card"
             proj-link="https://github.com/caioabrahao/underfabner-datapack"
             proj-title="FABNER: UNDERNEATH"
             proj-subtitle="A minecraft custom world generation datapack"

@@ -10,16 +10,19 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
+    meta: { title: 'Caio Abrahão' }
   },
   {
     path: '/about',
     name: 'About',
     component: About,
+    meta: { title: 'Caio Abrahão | About' }
   },
   {
     path: '/portfolio',
     name: 'Portfolio',
     component: Portfolio,
+    meta: { title: 'Caio Abrahão | Projects' }
   },
 ];
 
@@ -34,6 +37,11 @@ const router = createRouter({
       return { top: 0 };
     }
   },
+});
+
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title || 'Default Title';
+  next();
 });
 
 export default router;

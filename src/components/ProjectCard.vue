@@ -53,7 +53,7 @@ const props = defineProps({
   padding: 24px;
   width: 70%;
 
-  transition: all .3s cubic-bezier(.25, .8, .25, 1);
+  transition: border .3s cubic-bezier(.25, .8, .25, 1), filter .3s cubic-bezier(.25, .8, .25, 1);
 }
 .project-card:hover{
   border: rgba(211, 197, 174, 0.7) solid 1px;

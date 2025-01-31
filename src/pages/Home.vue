@@ -84,6 +84,10 @@ onMounted(() => {
   color: var(--beige);
   cursor: pointer;
   z-index: 3;
+  transition: filter .3s cubic-bezier(.25, .8, .25, 1);
+}
+.ri-arrow-down-s-line:hover{
+  filter: drop-shadow(0 0 16px rgba(211, 197, 174, 0.5));
 }
 
 .overlay-circle{

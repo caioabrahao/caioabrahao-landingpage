@@ -1,5 +1,16 @@
 <script setup>
 import SocialLinks from '../components/SocialLinks.vue';
+import gsap from 'gsap';
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  gsap.from('.about-photo', { duration: 1, opacity: 0, y: 50 });
+  gsap.from('.about-info', { duration: 1, opacity: 0, y: 50, delay: 0.5 });
+  gsap.from('.skills', { duration: 1, opacity: 0, y: 50, delay: 1, stagger: 0.3 });
+  gsap.from('.skill', { duration: 1, opacity: 0, y: 50, delay: 1, stagger: 0.2 });
+  gsap.from('.program-icon', { duration: 1, opacity: 0, y: 50, delay: 1, stagger: 0.2 });
+});
+
 </script>
 
 
